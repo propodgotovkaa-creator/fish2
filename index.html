@@ -395,7 +395,7 @@ header {
 }
 
 /* =====================================================
-   🔒 ТЕЛО РЫБ — НЕ МЕНЯТЬ
+   ТЕЛО РЫБ
 ===================================================== */
 
 .fish-body-image {
@@ -421,7 +421,7 @@ header {
 }
 
 /* =====================================================
-   🔒 ХВОСТЫ — НЕ МЕНЯТЬ
+   ХВОСТЫ
 ===================================================== */
 
 .fish-tail-image {
@@ -769,7 +769,7 @@ header {
       Лови рыбок со звуком
 
       <strong id="targetSound">
-        С
+        Р
       </strong>
 
     </p>
@@ -783,7 +783,7 @@ header {
     </div>
 
     <div id="score">
-      🐟 0 / 8
+      🐟 0 / 10
     </div>
 
     <div class="progress">
@@ -837,8 +837,6 @@ header {
 
 </svg>
 
-<!-- ПУЗЫРЬ -->
-
 <button
   id="bubble"
   type="button"
@@ -854,15 +852,11 @@ header {
 
 </button>
 
-<!-- ЗВУК ЛОПАНИЯ -->
-
 <audio
   id="bubblePopSound"
   src="cbc4277e031bf4a.mp3"
   preload="auto"
 ></audio>
-
-<!-- ОКНО -->
 
 <div
   id="finish"
@@ -896,11 +890,11 @@ header {
       <br><br>
 
       🟡 Если пузырь жёлтый —
-      говори слог <strong>СА</strong>.
+      говори слог <strong>РА</strong>.
       <br><br>
 
       🟢 Если пузырь зелёный —
-      говори слог <strong>ША</strong>.
+      говори слог <strong>ЛА</strong>.
       <br><br>
 
       Лопай пузыри и жди свою рыбку!
@@ -926,113 +920,137 @@ header {
 "use strict";
 
 /* =====================================================
-   КАРТИНКИ С
+   КАРТИНКИ Р
 ===================================================== */
 
-const S_CARDS = [
+const R_CARDS = [
 
   {
-    id: "bag",
-    name: "Сумка",
-    image: "raund/bag.png"
+    id: "roza",
+    name: "Роза",
+    image: "raund/01-roza.png"
   },
 
   {
-    id: "bus",
-    name: "Автобус",
-    image: "raund/bus.png"
+    id: "raketa",
+    name: "Ракета",
+    image: "raund/02-raketa.png"
   },
 
   {
-    id: "cabbage",
-    name: "Капуста",
-    image: "raund/cabbage.png"
+    id: "korova",
+    name: "Корова",
+    image: "raund/03-korova.png"
   },
 
   {
-    id: "dog",
-    name: "Собака",
-    image: "raund/dog.png"
+    id: "baraban",
+    name: "Барабан",
+    image: "raund/04-baraban.png"
   },
 
   {
-    id: "fox",
-    name: "Лиса",
-    image: "raund/fox.png"
+    id: "gitara",
+    name: "Гитара",
+    image: "raund/05-gitara.png"
   },
 
   {
-    id: "pineapple",
-    name: "Ананас",
-    image: "raund/pineapple.png"
+    id: "topor",
+    name: "Топор",
+    image: "raund/06-topor.png"
   },
 
   {
-    id: "scooter",
-    name: "Самокат",
-    image: "raund/scooter.png"
+    id: "komar",
+    name: "Комар",
+    image: "raund/07-komar.png"
   },
 
   {
-    id: "wasp",
-    name: "Оса",
-    image: "raund/wasp.png"
+    id: "robot",
+    name: "Робот",
+    image: "raund/08-robot.png"
+  },
+
+  {
+    id: "kukuruza",
+    name: "Кукуруза",
+    image: "raund/09-kukuruza.png"
+  },
+
+  {
+    id: "korona",
+    name: "Корона",
+    image: "raund/10-korona.png"
   }
 
 ];
 
 /* =====================================================
-   КАРТИНКИ Ш
+   КАРТИНКИ Л
 ===================================================== */
 
-const SH_CARDS = [
+const L_CARDS = [
 
   {
-    id: "cap",
-    name: "Шапка",
-    image: "raund/cap.png"
+    id: "lupa",
+    name: "Лупа",
+    image: "raund/01-lupa.png"
   },
 
   {
-    id: "car",
-    name: "Машина",
-    image: "raund/car.png"
+    id: "lodka",
+    name: "Лодка",
+    image: "raund/02-lodka.png"
   },
 
   {
-    id: "cat",
-    name: "Кошка",
-    image: "raund/cat.png"
+    id: "balalaika",
+    name: "Балалайка",
+    image: "raund/03-balalaika.png"
   },
 
   {
-    id: "cherry",
-    name: "Вишня",
-    image: "raund/cherry.png"
+    id: "velosiped",
+    name: "Велосипед",
+    image: "raund/04-velosiped.png"
   },
 
   {
-    id: "mouse",
-    name: "Мышь",
-    image: "raund/mouse.png"
+    id: "palatka",
+    name: "Палатка",
+    image: "raund/05-palatka.png"
   },
 
   {
-    id: "pillow",
-    name: "Подушка",
-    image: "raund/pillow.png"
+    id: "pila",
+    name: "Пила",
+    image: "raund/06-pila.png"
   },
 
   {
-    id: "shower",
-    name: "Душ",
-    image: "raund/shower.png"
+    id: "molotok",
+    name: "Молоток",
+    image: "raund/07-molotok.png"
   },
 
   {
-    id: "tire",
-    name: "Шина",
-    image: "raund/tire.png"
+    id: "stul",
+    name: "Стул",
+    image: "raund/08-stul.png"
+  },
+
+  {
+    id: "penal",
+    name: "Пенал",
+    image: "raund/09-penal.png"
+  },
+
+  {
+    id: "dyatel",
+    name: "Дятел",
+    image: "raund/10-dyatel.png"
   }
 
 ];
@@ -1044,15 +1062,15 @@ const SH_CARDS = [
 const ROUNDS = [
 
   {
-    sound: "С",
-    correctCards: S_CARDS,
-    wrongCards: SH_CARDS
+    sound: "Р",
+    correctCards: R_CARDS,
+    wrongCards: L_CARDS
   },
 
   {
-    sound: "Ш",
-    correctCards: SH_CARDS,
-    wrongCards: S_CARDS
+    sound: "Л",
+    correctCards: L_CARDS,
+    wrongCards: R_CARDS
   }
 
 ];
@@ -1786,14 +1804,6 @@ function moveBubble(
 
   }
 
-  /* ===================================================
-     ЛОПАНИЕ
-
-     ВАЖНО:
-     координаты зафиксированы.
-     Пузырь больше НЕ возвращается вниз.
-  =================================================== */
-
   if (
     bubbleState.popping
   ) {
@@ -1847,10 +1857,6 @@ function moveBubble(
     return;
 
   }
-
-  /* ===================================================
-     ОБЫЧНЫЙ ПОДЪЁМ
-  =================================================== */
 
   bubbleState.y -=
 
@@ -1908,10 +1914,6 @@ function popBubble() {
 
   }
 
-  /*
-    ФИКСИРУЕМ ТОЧНО ТЕКУЩЕЕ МЕСТО.
-  */
-
   bubbleState.popX =
     bubbleState.renderX;
 
@@ -1930,12 +1932,6 @@ function popBubble() {
   bubble.classList.add(
     "popping"
   );
-
-  /*
-    ЗВУК.
-
-    Каждый раз начинаем mp3 сначала.
-  */
 
   try {
 
@@ -3465,7 +3461,7 @@ function showGameComplete() {
     "";
 
   finishText.innerHTML =
-    "Все картинки со звуками С и Ш<br>пойманы!";
+    "Все картинки со звуками Р и Л<br>пойманы!";
 
   finishButton.textContent =
     "Рыбачить ещё раз";
@@ -3841,10 +3837,6 @@ finishButton.addEventListener(
     const actionType =
       finishButton.dataset.action;
 
-    /*
-      ПЕРВЫЙ СТАРТ
-    */
-
     if (
       actionType ===
       "start"
@@ -3860,10 +3852,6 @@ finishButton.addEventListener(
 
     }
 
-    /*
-      РАУНД 2
-    */
-
     if (
       actionType ===
       "next-round"
@@ -3876,10 +3864,6 @@ finishButton.addEventListener(
       return;
 
     }
-
-    /*
-      СНАЧАЛА
-    */
 
     if (
       actionType ===
@@ -3911,12 +3895,6 @@ startRound(
   0
 );
 
-/*
-  startRound скрывает окно,
-  поэтому сразу возвращаем
-  окно с правилами перед стартом.
-*/
-
 finishIcon.textContent =
   "🎣 🫧";
 
@@ -3936,11 +3914,11 @@ finishText.innerHTML = `
   <br><br>
 
   🟡 Если пузырь жёлтый —
-  говори слог <strong>СА</strong>.
+  говори слог <strong>РА</strong>.
   <br><br>
 
   🟢 Если пузырь зелёный —
-  говори слог <strong>ША</strong>.
+  говори слог <strong>ЛА</strong>.
   <br><br>
 
   Лопай пузыри и жди свою рыбку!
